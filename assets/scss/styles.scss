@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40px;
+    height: 60px;
     background-color: $primary-color;
     
     position: sticky;
@@ -15,23 +15,26 @@
     z-index: 2;
 }
 
+// grid sistem
+
 .content {
     max-width: 900px;
     margin: 0 auto;
 
     .innerContent {
-        max-width: 700px;
+        max-width: 800px;
+        padding: 1.5rem 0.8rem;
         margin: 0 auto;
     }
 }
 
-.baseGrid {
-    display: grid;
-    gap: 1.5rem;
+// .baseGrid {
+//     display: grid;
+//     gap: 1.5rem;
 
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
+//     padding-top: 2rem;
+//     padding-bottom: 2rem;
+// }
 
 // line breaker
 
@@ -40,7 +43,7 @@
     justify-content: space-around; /* Spaziatura uniforme tra le icone */
     align-items: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 2rem 0; // in precedenza 20px
     position: relative;
   }
   
@@ -51,7 +54,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #333; /* Colore della linea */
+    background-color: $tertiary-color; /* Colore della linea */
     z-index: 0;
 }
   
@@ -77,6 +80,10 @@
 
     background-color: rgba($tertiary-color, 0.3);
     background-blend-mode: soft-light;
+
+    img {
+        width: 350px;
+    }
 
     .headerLogo {
         position: absolute;
@@ -112,6 +119,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h1 {
+        text-shadow: 2px 2px 4px $primary-color;
+    }
 }
 
 .image1 {
@@ -119,7 +130,19 @@
 }
 
 .image2 {
-    background-image: url("../images/foodFish.webp");
+    background-image: url("../images/foodMix2.webp");
+}
+
+.image3 {
+    background-image: url("../images/privateChef.webp");
+}
+
+.image4 {
+    background-image: url("../images/cookingClass.webp");
+}
+
+.image5 {
+    background-image: url("../images/smallWedding.webp");
 }
 
 // generic image set
@@ -135,13 +158,13 @@
 // footer
 
 footer {
-    padding: 1rem 0;
+    // padding: 1rem 0;
     div {
         padding: 1rem 0;
         display: flex;
         flex-direction: column;
         text-align: center;
 
-        border-top: 2px solid $primary-color;
+        border-top: 2px solid $tertiary-color;
     }
 }

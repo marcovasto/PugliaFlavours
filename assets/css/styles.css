@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", serif;
   font-weight: 400;
@@ -21,15 +25,18 @@ h1 {
 h2 {
   font-weight: 700;
   color: #A38C5C;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 p {
   font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -49,7 +56,7 @@ a:active {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40px;
+  height: 60px;
   background-color: #301A07;
   position: sticky;
   top: 0; /* Definisce la distanza dal top della viewport */
@@ -61,15 +68,9 @@ a:active {
   margin: 0 auto;
 }
 .content .innerContent {
-  max-width: 700px;
+  max-width: 800px;
+  padding: 1.5rem 0.8rem;
   margin: 0 auto;
-}
-
-.baseGrid {
-  display: grid;
-  gap: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .iconRow {
@@ -77,7 +78,7 @@ a:active {
   justify-content: space-around; /* Spaziatura uniforme tra le icone */
   align-items: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -88,7 +89,7 @@ a:active {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #333; /* Colore della linea */
+  background-color: #A38C5C; /* Colore della linea */
   z-index: 0;
 }
 
@@ -110,6 +111,9 @@ a:active {
   background-repeat: no-repeat;
   background-color: rgba(163, 140, 92, 0.3);
   background-blend-mode: soft-light;
+}
+.headerImg img {
+  width: 350px;
 }
 .headerImg .headerLogo {
   position: absolute;
@@ -139,13 +143,28 @@ a:active {
   align-items: center;
   justify-content: center;
 }
+.bgImage h1 {
+  text-shadow: 2px 2px 4px #301A07;
+}
 
 .image1 {
   background-image: url("../images/foodPasta.webp");
 }
 
 .image2 {
-  background-image: url("../images/foodFish.webp");
+  background-image: url("../images/foodMix2.webp");
+}
+
+.image3 {
+  background-image: url("../images/privateChef.webp");
+}
+
+.image4 {
+  background-image: url("../images/cookingClass.webp");
+}
+
+.image5 {
+  background-image: url("../images/smallWedding.webp");
 }
 
 .contentImage {
@@ -158,13 +177,10 @@ a:active {
      object-position: center;
 }
 
-footer {
-  padding: 1rem 0;
-}
 footer div {
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-top: 2px solid #301A07;
+  border-top: 2px solid #A38C5C;
 }
