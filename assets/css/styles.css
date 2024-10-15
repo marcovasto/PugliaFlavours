@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
@@ -18,25 +17,30 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 800;
   color: #FFF5EB;
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   color: #A38C5C;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
+  font-weight: 500;
+  color: #A38C5C;
 }
 
 p {
   font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  margin-bottom: 1.5rem;
 }
 
 a {
@@ -59,23 +63,25 @@ a:active {
   height: 60px;
   background-color: #301A07;
   position: sticky;
-  top: 0; /* Definisce la distanza dal top della viewport */
+  top: 10px;
   z-index: 2;
+  margin: 10px 0;
+  border-radius: 2rem;
 }
 
 .content {
   max-width: 900px;
+  padding: 0 0.5rem;
   margin: 0 auto;
 }
 .content .innerContent {
   max-width: 800px;
-  padding: 1.5rem 0.8rem;
   margin: 0 auto;
 }
 
 .iconRow {
   display: flex;
-  justify-content: space-around; /* Spaziatura uniforme tra le icone */
+  justify-content: space-around; /* same space between icon */
   align-items: center;
   width: 100%;
   padding: 2rem 0;
@@ -85,11 +91,11 @@ a:active {
 .iconRow::before {
   content: "";
   position: absolute;
-  bottom: 50%; /* Posiziona la linea a metà altezza */
+  bottom: 50%; /* vertical align the lines */
   left: 0;
   right: 0;
-  height: 2px;
-  background-color: #A38C5C; /* Colore della linea */
+  height: 1px;
+  background-color: #301A07; /* lines color */
   z-index: 0;
 }
 
@@ -98,8 +104,8 @@ a:active {
   color: #A38C5C;
   background-color: #FFF5EB;
   position: relative;
-  z-index: 1; /* Porta le icone sopra la linea */
-  padding: 0 15px; /* Aggiunge spazio attorno alle icone */
+  z-index: 1; /* icon */
+  padding: 0 15px; /* icon padding around */
 }
 
 .headerImg {
@@ -111,25 +117,30 @@ a:active {
   background-repeat: no-repeat;
   background-color: rgba(163, 140, 92, 0.3);
   background-blend-mode: soft-light;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 .headerImg img {
-  width: 350px;
+  width: 300px;
+  background-color: #FFF5EB;
+  border-radius: 50%;
 }
 .headerImg .headerLogo {
   position: absolute;
-  top: 100%;
+  top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
 }
 .headerImg .headerLogo .socialLogo {
-  text-align: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .freeSpace {
-  height: 200px;
+  height: 120px;
 }
 
 .bgImage {
@@ -142,6 +153,8 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
 }
 .bgImage h1 {
   text-shadow: 2px 2px 4px #301A07;
@@ -168,13 +181,14 @@ a:active {
 }
 
 .contentImage {
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Ombra con sfocatura */
 }
 
 footer div {
@@ -182,5 +196,5 @@ footer div {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-top: 2px solid #A38C5C;
+  border-top: 1px solid #A38C5C;
 }

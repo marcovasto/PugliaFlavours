@@ -15,8 +15,8 @@ $tertiary-color-active: lighten($tertiary-color, 20%);
 
 // Font-weight variables
 $font-regular: 400;      // Testi standard
-$font-semi-bold: 600;    // Sottotitoli o elementi in evidenza
-$font-bold: 700;         // Titoli principali
+$font-semi-bold: 500;    // Sottotitoli o elementi in evidenza
+$font-bold: 800;         // Titoli principali
 
 // Font-size variables
 $font-size-h1: clamp(2rem, 1.5rem + 1.5vw, 3.5rem);
@@ -46,19 +46,24 @@ h2 {
     //font-size: $font-size-h2;
     font-weight: $font-bold;
     color: $tertiary-color;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 h3 {
-    //font-size: $font-size-h3;
+    font-size: $font-size-text;
     font-weight: $font-semi-bold;
-    margin-bottom: 1rem;
+    color: $tertiary-color;
+    // margin-bottom: 0 rem;
 }
 
 p {
     font-size: $font-size-text;
     font-weight: $font-regular;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+img {
+    margin-bottom: 1.5rem;
 }
 
 a {
