@@ -3,12 +3,17 @@
 
 // navbar temporanea
 
-.temporaryNavbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 60px;
+.navbar {
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    // height: 60px;
     background-color: $primary-color;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    line-height: 60px;
     
     position: sticky;
     top: 10px;
@@ -16,6 +21,14 @@
 
     margin: 10px 0;
     border-radius: 2rem;
+
+    .currentPage {
+        background-color: $tertiary-color;
+        color: $primary-color;
+        font-weight: $font-semi-bold;
+        // padding: 0 1rem;
+        border-radius: 2rem;
+    }
 }
 
 // grid sistem
@@ -182,5 +195,53 @@ footer {
         text-align: center;
 
         border-top: 1px solid $tertiary-color;
+    }
+}
+
+// contact form
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+  
+    /* Mantieni il campo messaggio e il bottone full-width */
+    #message, button {
+        grid-column: span 2;
+    }
+}
+
+label {
+    font-size: $font-size-text;
+    font-weight: $font-regular;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    background-color: $secondary-color-hover;
+    color: $primary-color;
+
+    transition: all 0.3s ease;
+
+    // &:hover {
+    //     //transition: 1s;
+    //     //border-color: red;
+    // }
+
+    &:focus {
+        //border-color: red;
+        background-color: $secondary-color-active;
     }
 }
