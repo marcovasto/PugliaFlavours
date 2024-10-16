@@ -86,7 +86,8 @@
 
 .headerImg {
     position: relative;
-    height: 200px;
+    // standard 200px
+    height: 160px;
 
     background-image: url("../images/trulliAlberobello.webp");
     background-size: cover;
@@ -100,7 +101,8 @@
     border-bottom-right-radius: 2rem;
 
     img {
-        width: 300px;
+        // standard 300px
+        width: 280px;
         background-color: $secondary-color;
         border-radius: 50%;
     }
@@ -126,13 +128,14 @@
 }
 
 .freeSpace {
-    height: 120px;
+    // standard 120px
+    height: 100px;
 }
 
 // h1 background image
 
 .bgImage {
-    min-height: 100px;
+    min-height: 80px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -173,6 +176,10 @@
     background-image: url("../images/smallWedding.webp");
 }
 
+.image6 {
+    background-image: url("../images/foodPasta2.webp");
+}
+
 // generic image set
 
 .contentImage {
@@ -200,48 +207,81 @@ footer {
 
 // contact form
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 800px) {
+form {
     .form-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
+        margin-bottom: 1rem;
     }
-  
-    /* Mantieni il campo messaggio e il bottone full-width */
-    #message, button {
-        grid-column: span 2;
+    
+    @media (min-width: 800px) {
+        .form-grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
-}
-
-label {
-    font-size: $font-size-text;
-    font-weight: $font-regular;
-    display: block;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    border: 1px solid $primary-color;
-    border-radius: 5px;
-    background-color: $secondary-color-hover;
-    color: $primary-color;
-
-    transition: all 0.3s ease;
-
-    // &:hover {
-    //     //transition: 1s;
-    //     //border-color: red;
-    // }
-
-    &:focus {
-        //border-color: red;
-        background-color: $secondary-color-active;
+    
+    label {
+        font-size: $font-size-text;
+        font-weight: $font-regular;
+        // display: block;
     }
+    
+    input, select, textarea {
+        width: 100%;
+        padding: 0.7rem;
+        color: $primary-color;
+        background-color: $secondary-color-hover;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:focus {
+            transition: all 0.3s ease;
+            background-color: $secondary-color-active;
+        }
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center; // Allinea verticalmente checkbox e testo
+        margin: 1rem auto;
+    
+        // Stile per il checkbox
+        input[type="checkbox"] {
+            width: auto; // Mantieni il checkbox nelle sue dimensioni normali
+            margin-right: 0.5rem; // Spazio tra il checkbox e la label (opzionale)
+        }
+    
+        // Stile per la label accanto al checkbox
+        label {
+            margin: 0; // Rimuovi eventuali margini dalla label
+            font-size: $font-size-text;
+        }
+    }
+    
+    button {
+        width: 100%;
+        background-color: $tertiary-color;
+        color: $primary-color;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 2rem;
+    
+        font-size: $font-size-text;
+        font-weight: $font-semi-bold;
+    
+        cursor: pointer;
+    
+        &:hover {
+            background-color: $tertiary-color-hover;
+            transition: all 0.3s ease;
+        }
+    
+        &:active {
+            background-color: $tertiary-color-active;
+        }
+    }
+
+    
 }

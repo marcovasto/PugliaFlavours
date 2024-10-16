@@ -17,24 +17,26 @@ body {
 }
 
 h1 {
+  font-size: clamp(1.5rem, 1.3rem + 0.9vw, 2.3rem);
   font-weight: 800;
   color: white;
 }
 
 h2 {
+  font-size: clamp(1.1rem, 1rem + 0.7vw, 1.8rem);
   font-weight: 800;
   color: #A38C5C;
   margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
-  font-weight: 500;
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+  font-weight: 600;
   color: #A38C5C;
 }
 
 p {
-  font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -45,8 +47,8 @@ main img {
 
 a {
   text-decoration: none;
-  font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
-  font-weight: 400;
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+  font-weight: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
   color: #A38C5C;
 }
 a:hover, a:focus {
@@ -71,7 +73,7 @@ a:active {
 .navbar .currentPage {
   background-color: #A38C5C;
   color: #301A07;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 2rem;
 }
 
@@ -116,7 +118,7 @@ a:active {
 
 .headerImg {
   position: relative;
-  height: 200px;
+  height: 160px;
   background-image: url("../images/trulliAlberobello.webp");
   background-size: cover;
   background-position: center;
@@ -127,7 +129,7 @@ a:active {
   border-bottom-right-radius: 2rem;
 }
 .headerImg img {
-  width: 300px;
+  width: 280px;
   background-color: #FFF5EB;
   border-radius: 50%;
 }
@@ -146,11 +148,11 @@ a:active {
 }
 
 .freeSpace {
-  height: 120px;
+  height: 100px;
 }
 
 .bgImage {
-  min-height: 100px;
+  min-height: 80px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,6 +188,10 @@ a:active {
   background-image: url("../images/smallWedding.webp");
 }
 
+.image6 {
+  background-image: url("../images/foodPasta2.webp");
+}
+
 .contentImage {
   border-radius: 2rem;
   width: 100%;
@@ -205,38 +211,62 @@ footer div {
   border-top: 1px solid #A38C5C;
 }
 
-.form-grid {
+form .form-grid {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-
 @media (min-width: 800px) {
-  .form-grid {
-    display: grid;
+  form .form-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  /* Mantieni il campo messaggio e il bottone full-width */
-  #message, button {
-    grid-column: span 2;
   }
 }
-label {
-  font-size: clamp(0.9rem, 0.7rem + 1vw, 1.3rem);
+form label {
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
   font-weight: 400;
-  display: block;
 }
-
-input, select, textarea {
+form input, form select, form textarea {
   width: 100%;
   padding: 0.7rem;
-  margin-bottom: 1rem;
+  color: #301A07;
+  background-color: white;
   border: 1px solid #301A07;
   border-radius: 5px;
+  cursor: pointer;
+}
+form input:focus, form select:focus, form textarea:focus {
+  transition: all 0.3s ease;
   background-color: white;
+}
+form .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+}
+form .checkbox-container input[type=checkbox] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+form .checkbox-container label {
+  margin: 0;
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+}
+form button {
+  width: 100%;
+  background-color: #A38C5C;
   color: #301A07;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #b5a37d;
   transition: all 0.3s ease;
 }
-input:focus, select:focus, textarea:focus {
-  background-color: white;
+form button:active {
+  background-color: #c8ba9d;
 }
