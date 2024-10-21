@@ -66,6 +66,13 @@ p {
     margin-bottom: 1.5rem;
 }
 
+ul {
+    font-size: $font-size-text;
+    font-weight: $font-regular;
+    margin-bottom: 1.5rem;
+    list-style-type: none;
+}
+
 main {
     img {
         margin-bottom: 1.5rem;

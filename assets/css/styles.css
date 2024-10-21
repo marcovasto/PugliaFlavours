@@ -41,6 +41,13 @@ p {
   margin-bottom: 1.5rem;
 }
 
+ul {
+  font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  list-style-type: none;
+}
+
 main img {
   margin-bottom: 1.5rem;
 }
@@ -190,6 +197,10 @@ a:active {
 
 .image6 {
   background-image: url("../images/foodPasta2.webp");
+}
+
+.image7 {
+  background-image: url("../images/foodFrisella.webp");
 }
 
 .contentImage {
