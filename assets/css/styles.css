@@ -119,7 +119,7 @@ a:active {
 .headerImg {
   position: relative;
   height: 160px;
-  background-image: url("../images/trulliAlberobello.webp");
+  background-image: url("../images/trulli.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -169,11 +169,11 @@ a:active {
 }
 
 .image1 {
-  background-image: url("../images/foodPasta.webp");
+  background-image: url("../images/foodFocaccia.webp");
 }
 
 .image2 {
-  background-image: url("../images/foodMix2.webp");
+  background-image: url("../images/foodPasta1.webp");
 }
 
 .image3 {
