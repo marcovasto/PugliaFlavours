@@ -21,3 +21,6 @@ build/
 
 # Ignora cartelle di configurazione dell'editor
 .idea/
+
+# ignora php
+send_email.php
