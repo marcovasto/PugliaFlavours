@@ -1,13 +1,7 @@
 @import "reset";
 @import "config";
 
-// navbar temporanea
-
 .navbar {
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
-    // height: 60px;
     background-color: $primary-color;
 
     display: grid;
@@ -26,7 +20,6 @@
         background-color: $tertiary-color;
         color: $primary-color;
         font-weight: $font-semi-bold;
-        // padding: 0 1rem;
         border-radius: 2rem;
     }
 }
@@ -40,36 +33,29 @@
 
     .innerContent {
         max-width: 800px;
-        // padding: 0 0.5rem;
         margin: 0 auto;
     }
 }
-
-// @media (max-width: 800px) {
-//     .content {
-//         padding: 0 0.5rem;
-//     }
-// }
 
 // line breaker
 
 .iconRow {
     display: flex;
-    justify-content: space-around; /* same space between icon */
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 2rem 0; // standard 20px
+    padding: 2rem 0;
     position: relative;
   }
   
 .iconRow::before {
     content: '';
     position: absolute;
-    bottom: 50%; /* vertical align the lines */
+    bottom: 50%;
     left: 0;
     right: 0;
     height: 1px;
-    background-color: $primary-color; /* lines color */
+    background-color: $primary-color;
     z-index: 0;
 }
   
@@ -78,15 +64,14 @@
     color: $tertiary-color;
     background-color: $secondary-color;
     position: relative;
-    z-index: 1; /* icon */
-    padding: 0 15px; /* icon padding around */
+    z-index: 1;
+    padding: 0 15px;
 }
 
 // header
 
 .headerImg {
     position: relative;
-    // standard 200px
     height: 160px;
 
     background-image: url("../images/trulli.webp");
@@ -101,7 +86,6 @@
     border-bottom-right-radius: 2rem;
 
     img {
-        // standard 300px
         width: 280px;
         background-color: $secondary-color;
         border-radius: 50%;
@@ -109,26 +93,22 @@
 
     .headerLogo {
         position: absolute;
-        top: 105%; // Posiziona a metà altezza dell'header 100%
-        left: 50%; // Posiziona al centro sull'asse X
-        transform: translate(-50%, -50%); // Sposta l'elemento esattamente al centro
+        top: 105%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         overflow: hidden;
-        // border-top-left-radius: 50%;
-        // border-top-right-radius: 50%;
 
         .socialLogo {
-            // text-align: center;
             position: absolute;
-            top: 75%; // Posiziona a metà altezza dell'header 100%
-            left: 50%; // Posiziona al centro sull'asse X
-            transform: translate(-50%, -50%); // Sposta l'elemento esattamente al centro
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
 
 .freeSpace {
-    // standard 120px
     height: 100px;
 }
 
@@ -192,13 +172,12 @@
     height: 400px;
     object-fit: cover;
     object-position: center;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Ombra con sfocatura */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 // footer
 
 footer {
-    // padding: 1rem 0;
     div {
         padding: 1rem 0;
         display: flex;
@@ -228,7 +207,6 @@ form {
     label {
         font-size: $font-size-text;
         font-weight: $font-regular;
-        // display: block;
     }
     
     input, select, textarea {
@@ -248,18 +226,18 @@ form {
 
     .checkbox-container {
         display: flex;
-        align-items: center; // Allinea verticalmente checkbox e testo
+        align-items: center;
         margin: 1rem auto;
     
-        // Stile per il checkbox
+        // checkbox style
         input[type="checkbox"] {
-            width: auto; // Mantieni il checkbox nelle sue dimensioni normali
-            margin-right: 0.5rem; // Spazio tra il checkbox e la label (opzionale)
+            width: auto;
+            margin-right: 0.5rem;
         }
     
-        // Stile per la label accanto al checkbox
+        // checkbox label style
         label {
-            margin: 0; // Rimuovi eventuali margini dalla label
+            margin: 0;
             font-size: $font-size-text;
         }
     }
@@ -286,6 +264,26 @@ form {
             background-color: $tertiary-color-active;
         }
     }
+}
 
-    
+// contact form banner
+
+.message-banner {
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
