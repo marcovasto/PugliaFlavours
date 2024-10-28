@@ -281,23 +281,24 @@ form button:hover {
 form button:active {
   background-color: #c8ba9d;
 }
+form .g-recaptcha {
+  margin-bottom: 1.5rem;
+}
 
 .message-banner {
-  padding: 1em;
-  margin: 1em 0;
+  padding: 1rem;
+  margin: 1.5rem 0;
   text-align: center;
-  font-weight: bold;
-  border-radius: 5px;
+  font-weight: 600;
+  border-radius: 1rem;
 }
 
 .message-success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+  background-color: green;
+  color: #301A07;
 }
 
 .message-error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+  background-color: red;
+  color: #FFF5EB;
 }
