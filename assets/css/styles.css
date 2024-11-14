@@ -55,7 +55,7 @@ main img {
 a {
   text-decoration: none;
   font-size: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
-  font-weight: clamp(0.9rem, 0.85rem + 0.4vw, 1.2rem);
+  font-weight: 400;
   color: #A38C5C;
 }
 a:hover, a:focus {
