@@ -1,0 +1,10 @@
+# Forza il reindirizzamento da senza www. a www.
+RewriteEngine On
+
+# Se l'host è senza www., reindirizza a www.
+RewriteCond %{HTTP_HOST} ^pugliaflavours\.com$ [NC]
+RewriteRule ^(.*)$ https://www.pugliaflavours.com/$1 [L,R=301]
+
+# Forza HTTPS (se non già configurato)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
