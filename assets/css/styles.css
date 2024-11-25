@@ -203,6 +203,10 @@ a:active {
   background-image: url("../images/foodMix2.webp");
 }
 
+.image8 {
+  background-image: url("../images/cookies.webp");
+}
+
 .contentImage {
   border-radius: 2rem;
   width: 100%;
@@ -220,6 +224,11 @@ footer div {
   flex-direction: column;
   text-align: center;
   border-top: 1px solid #A38C5C;
+}
+footer .policies {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 form .form-grid {

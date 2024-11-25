@@ -163,6 +163,10 @@
     background-image: url("../images/foodMix2.webp");
 }
 
+.image8 {
+    background-image: url("../images/cookies.webp");
+}
+
 // generic image set
 
 .contentImage {
@@ -184,6 +188,12 @@ footer {
         text-align: center;
 
         border-top: 1px solid $tertiary-color;
+    }
+
+    .policies {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
     }
 }
 
