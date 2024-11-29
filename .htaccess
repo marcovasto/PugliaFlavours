@@ -8,3 +8,7 @@ RewriteRule ^(.*)$ https://www.pugliaflavours.com/$1 [L,R=301]
 # Forza HTTPS (se non già configurato)
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Reindirizza index.html alla root /
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ https://www.pugliaflavours.com/ [L,R=301]
