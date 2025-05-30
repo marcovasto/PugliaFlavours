@@ -19,3 +19,7 @@ The website is currently hosted and live at: [pugliaflavours.com](https://puglia
 - **Image Gallery**: High-quality images showcasing dishes and the chef’s services.
 - **Contact Form**: Functional contact form built with PHP for direct communication and booking requests.
 - **Simple and Clean Layout**: User-friendly interface focusing on content clarity and ease of navigation.
+
+## Important
+
+The PHP files for the contact form, including sensitive data such as API keys for reCAPTCHA, are **not included** in this repository to protect security and privacy. These files are hosted only on the live server.
